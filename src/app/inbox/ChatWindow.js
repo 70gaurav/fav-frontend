@@ -11,7 +11,7 @@ const ChatWindow = ({ customerId,refreshChat }) => {
   useEffect(() => {
     const fetchMessages = async () => {
       try {
-        const response = await fetch(`http://13.200.242.122:8080/api/CustomerDetails/${customerId}`);
+        const response = await fetch(`https://favcrm.softwareexato.com/api/CustomerDetails/${customerId}`);
         const result = await response.json();
 
         if (result.message === "request success" && result.data.customerEmails) {
